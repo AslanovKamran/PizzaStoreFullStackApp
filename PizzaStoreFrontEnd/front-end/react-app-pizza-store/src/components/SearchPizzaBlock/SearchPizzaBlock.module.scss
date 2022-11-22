@@ -1,0 +1,47 @@
+.root {
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 10px;
+
+    
+    @media (max-width:1117px) {
+       justify-content: center;
+      }
+    
+    .inputContainer {
+        position: relative;
+
+        .input {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            width: 250px;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all ease-in-out 0.2s;
+            opacity: 0.5;
+            outline: none;
+
+            &:focus {
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                opacity: 1;
+            }
+        }
+
+        .closeIcon {
+            position: absolute;
+            top: 12px;
+            left: 200px;
+            opacity: 0.2;
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+                transform: scale(1.05) rotate(90deg);
+
+            }
+
+
+        }
+    }
+}

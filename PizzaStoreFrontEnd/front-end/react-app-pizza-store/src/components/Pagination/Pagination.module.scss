@@ -1,0 +1,54 @@
+@import '../../scss/variables';
+
+.root {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    li {
+
+      
+
+        a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            border: 1px solid $orange;
+            color: $orange;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all ease-in-out 0.2s;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: darken($orange, 12%);
+                color: white;
+                transform: translateY(-5px);
+            }
+
+        }
+
+    }
+
+
+    :global{
+        .selected{
+            a{
+                transform: translateY(-5px);
+                background-color: $orange;
+                color: white;
+                
+                &:hover{
+                    
+                    transform: translateY(5px);
+                }
+            }
+        }
+
+        .disabled{
+            opacity:0.2;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@import '../variables';
+
+.categories {
+  ul {
+    display: flex;
+    gap: 10px;
+
+    li {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.1s ease-in-out;
+      @include noselect(); //Unable to highlight the text of the category 
+      transition: all ease-in-out .2s;
+
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+        transform: translateY(-5px);
+        box-shadow: 1px 5px 11px 4px rgba(0,0,0,0.09);
+      }
+
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+}
+
+

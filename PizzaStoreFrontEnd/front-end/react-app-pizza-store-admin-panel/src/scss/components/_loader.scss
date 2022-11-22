@@ -1,0 +1,67 @@
+:root{
+    --size:5.55px
+}
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 50vh;    
+
+    &__image {
+        img {
+            width: 40px;
+            animation: rotation linear 2s infinite;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        
+        .dot {
+            border-radius: 50%;
+            background-color: black;
+            width: var(--size);
+            height: var(--size);
+            margin-top: 10px;
+            margin-left: var(--size);
+            animation: jump 1s ease-in-out infinite;
+            
+        }
+        
+        .first {
+            animation-delay: 0.1s;
+        }
+        
+        .second {
+            animation-delay: 0.2s;
+        }
+
+        .third {
+            animation-delay: 0.3s;
+        }
+    }
+}
+
+
+@keyframes rotation {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+
+
+}

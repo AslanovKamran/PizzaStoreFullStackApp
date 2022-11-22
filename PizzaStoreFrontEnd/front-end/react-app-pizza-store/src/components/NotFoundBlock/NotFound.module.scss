@@ -1,0 +1,45 @@
+@import '../../scss/variables';
+@import '../../scss/libs/normalize';
+
+.root {
+    text-align: center;
+    padding: 100px;
+    margin: 0 auto;
+
+    h1{
+      font-size: 40px;
+    }
+    span {
+        font-size: 54px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+
+.button {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: $orange;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  transition: background-color $duration ease-in-out, border-color $duration ease-in-out, transform ease-in-out .2s;
+  border: 1px solid transparent;
+  font-size: 18px;
+    @include noselect();
+  &:hover {
+    background-color: darken($orange, 8%);
+  }
+
+  &:active {
+    background-color: darken($orange, 12%);
+    transform: translateY(2px);
+  }
+  
+}

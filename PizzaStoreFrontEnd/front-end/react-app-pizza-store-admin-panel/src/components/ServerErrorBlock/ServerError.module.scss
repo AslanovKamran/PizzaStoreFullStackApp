@@ -1,0 +1,40 @@
+@import '../../scss/variables';
+@import '../../scss/libs/normalize';
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    flex-direction: column;
+
+    .text{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    .button {
+        margin-top: 20px;
+        display: inline-block;
+        background-color: $orange;
+        border-radius: 30px;
+        padding: 10px 20px;
+        min-width: 100px;
+        text-align: center;
+        cursor: pointer;
+        color: white;
+        transition: background-color $duration ease-in-out, border-color $duration ease-in-out, transform ease-in-out .1s;
+        border: 1px solid transparent;
+        font-size: 18px;
+          @include noselect();
+        &:hover {
+          background-color: darken($orange, 8%);
+        }
+      
+        &:active {
+          background-color: darken($orange, 12%);
+          transform: translateY(2px);
+        }
+        
+      }
+}
