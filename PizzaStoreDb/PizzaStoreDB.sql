@@ -143,7 +143,7 @@ GO
 CREATE PROC AuthorizeUser @Login NVARCHAR(255), @Password NVARCHAR(100)
 AS
 BEGIN 
-SELECT * FROM [User] WHERE [User].Login = @Login AND [User].Password = @Password
+SELECT * FROM [User] WHERE [User].Login = @Login COLLATE Latin1_General_CS_AS AND [User].Password = @Password COLLATE Latin1_General_CS_AS --COLLATE for Register Sensetive Authorization
 END
 
 GO
